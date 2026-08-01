@@ -1,0 +1,222 @@
+ cook your dish here
+# Abstraction-> It is the process of hiding implementation details and exposing only the essential functionality to the user 
+#  ->To make code simpler and easier to interct with
+
+# from abc import ABC,abstractmethod
+# class Greet (ABC):
+#     @abstractmethod
+#     def say_hello(self):
+#         pass
+    
+#     def move(self):
+#         return "Moving"
+    
+
+# class English(Greet):
+#     def fun(self):
+#         return "hello"
+#     def say_hello(self):
+#         return "Hello"
+# g=English()
+# # print(g.say_hello())
+# # print(g.fun())
+# print(g.move())
+
+
+# Abstract Properties
+
+# class Animal(ABC):
+#     @property
+#     @abstractmethod
+#     def species(self):
+#         pass
+    
+# class Dog(Animal):
+#     @property
+#     def species(self):
+#         return "ajnca"
+
+# dog=Dog()
+# print(dog.species)
+
+
+# NumPy->numerical python
+# import numpy as np
+# arr=np.array([1,2,3,4,5])
+# print(arr)
+# print(np.__version__)
+# print(type(arr))
+
+# 0_D
+
+import numpy as np
+# arr=np.array(34)
+# arr=np.array([1,2,3,4,5])
+# arr=np.array([[1,2,3],[4,5,6]])
+# arr=np.array([[[1,2,3],[4,5,6]],[[1,2,3],[4,5,6]]])
+
+# # pip install numpy
+# print(arr)
+# print(arr.ndim)
+
+# arr=np.array([1,2,3,4],ndmin=1)
+# print(arr)
+# print("nuber of dimensions ",arr.ndim)
+
+# Access
+
+# print(arr[0])
+# print(arr[2]+arr[3])
+# arr=np.array([[1,2,3],[4,5,6]])
+# print(arr[-1,-1])
+
+# Slicing arrays
+
+
+# arr=np.array([1,2,3,4,3,45,6,6])
+# print(arr[1:5:2])
+
+# Assignment 
+# create an array from 1 to 20 and print only odd number 
+
+# 2D slicing 
+# arr=np.array([[1,2,3,7,34,4],[4,5,6,23,3,3]])
+# print(arr[0:2,0:3])
+# 0 1 2 3 4 
+# 1,2,3,7,34,4->0
+# 4,5,6,23,3,3->1
+
+# Data types
+# i-integer
+# arr=np.array([1,2,3,4,5],dtype='S')
+# arr=np.array([])
+# print(arr)
+# print(arr.dtype)
+
+
+# arr=np.array([1.1,2.2,3.1,4.1,5.1])
+# newarr=arr.astype('i')
+# print(arr)
+# print(newarr)
+# print(newarr.dtype)
+# arr=np.array(['a','2','3'],dtype='i')
+
+# Copy and View 
+# arr=np.array([1,2,3,4,3,45,6,6])
+# # x=arr.copy()
+# x=arr.view()
+# arr[0]=43
+# print(arr)
+# print(x)
+
+
+# shape of array
+# arr=np.array([[1,2,3,4,3,45,6,6],[1,2,2,3,4,45,3,4]])
+# print(arr.shape)
+
+# reshape arrays
+# arr=np.array([1,2,3,4,3,45,6,6,56,1,3,5])
+# newarray=arr.reshape(2,2,3)
+# print(newarray)
+
+# Iterating array
+
+
+# arr=np.array([1,2,3,4,3,45,6,6,56,1,3,5])
+# print(arr[4])
+# for x in arr:
+#     print(x)
+
+# print the sum of all element present in a arr
+
+
+# arr=np.array([[1,2,3,4,3,45,6,6],[1,2,2,3,4,45,3,4]])
+
+# for x in arr:
+#     for y in x:
+#         print(y)
+        
+# Replace all even number with 0 
+# find the largest and smallest value in the array
+# find the sum of all the elements in matrix
+
+# diff bwt reshape() and resize()
+
+
+# arr=np.array([1,2,3,4,3,45,6,6,56,1,3,5])
+# newarray=arr.reshape(2,2,3)
+# newarr=arr.resize(2,2,3)
+# print(newarray)
+# print(arr)
+
+# Iteration Arrays using nditer()
+
+
+
+# arr=np.array([[[1,2,3],[4,5,6],[2,3,4]],[[1,2,3],[4,5,6],[7,4,6]]])
+# for x in np.nditer(arr[:,::2]):
+#     print(x)
+    
+# ndenumerate()
+# for idx,x in np.ndenumerate(arr):
+#     print(idx,x)
+    
+# Iterate array with diff data type
+# arr=np.array([1,2,3,4,3,45,6,6,56,1,3,5])
+# # op_dtypes=['S']
+# for x in np.nditer(arr,flags=['buffered'],op_dtypes=['S']):
+#     print(x)
+
+
+# arr1=np.array([1,2,3])
+# arr2=np.array([4,5,6])
+# arr=np.concatenate((arr1,arr2),axis=0)
+# print(arr)
+# arr1=np.array([[1,2,3],[93,4,5]])
+# arr2=np.array([[4,5,6],[23,3,5]])
+# arr=np.concatenate((arr1,arr2),axis=1)
+# print(arr)
+
+
+# stack()
+# arr1=np.array([1,2,3])
+# arr2=np.array([4,5,6])
+# arr=np.stack((arr1,arr2),axis=1)
+# print(arr)
+
+
+# hstack()
+# arr1=np.array([1,2,3])
+# arr2=np.array([4,5,6])
+# arr=np.hstack((arr1,arr2))
+# print(arr)
+
+
+
+# vstack
+# arr1=np.array([1,2,3])
+# arr2=np.array([4,5,6])
+# arr=np.vstack((arr1,arr2))
+# print(arr)
+
+# along height dstack
+# arr1=np.array([1,2,3,4])
+# arr2=np.array([4,5,6,7])
+# arr=np.dstack((arr1,arr2))
+# print(arr)
+
+# spitting numpy array
+
+# array_split()
+
+# arr1=np.array([1,2,3,4,5,6,7,8])
+
+# newarr=np.array_split(arr1,3)
+# print(newarr[0])
+
+
+# Assignment
+# reverse an array using slicing 
+# extract the middle three elements from an array having 7 elements
+# print only first 5 elements from an array
+# extract 2*2 submatrix from 3*3 matrix

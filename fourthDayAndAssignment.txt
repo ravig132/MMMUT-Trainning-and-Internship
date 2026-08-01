@@ -1,0 +1,178 @@
+# cook your dish here
+
+# OOP->object-Oriented programming
+# Clear structure to program
+# ease maintain ,reuse ,and debug
+# DRY(don't repeat youself)
+# built reusble application with code
+
+# Class and Object 
+  
+# car -> Volo,Audi 
+# Fruits->Apple, Mango
+# student ->ram
+
+
+#  class-> Blueprint
+# object->Instance of class
+
+
+# class Student:
+#     name="Ram"
+# create an object
+# s1=Student()
+# s2=Student()
+# s3=Student()
+# Delete object
+# del s1
+# print(s2.name)
+# print(s3.name)
+
+
+# class Person:
+#     def __init__(self,name,age):
+#         self.name=name
+#         self.age=age
+
+# p1=Person("Ram",24)
+# p2=Person("Krishna",24)
+# print(p1.name)
+# print(p1.age)
+# print(p2.name)
+# print(p2.age)
+
+# Default Values in init()
+# class Person:
+#     def __init__(self,name,age=24):
+#         self.name=name
+#         self.age=age
+
+# p1=Person("Ram")
+# p2=Person("Krishna",23)
+# print(p1.name)
+# print(p1.age)
+# print(p2.name)
+# print(p2.age)
+
+
+# class Person:
+#     def __init__(self,name,age=24):
+#         self.name=name
+#         self.age=age
+#     def printname(self):
+#         print(self.name)
+#     def printage(self):
+#         print(self.age)
+        
+    
+# p1=Person("Ram")
+# p2=Person("Krishna",23)
+# p1.printname()
+# print(p1.name)
+# print(p1.age)
+# print(p2.name)
+# print(p2.age)
+
+
+# Assignment1
+# Create a class called Dog
+# Add an __init__ method with parameters name and age, and store them as properties using self
+# Add a method called bark that prints the dog's name followed by " says Woof!"
+# Create an object d1 of the Dog class with name "Buddy" and age 3
+# Call the bark method on d1
+
+
+
+# Assignment2
+# Create a class called Person
+#  Add an __init__ method that takes name and age as parameters
+# Add a method called greet that prints "Hello, my name is " followed by the name
+# Create an object p1 of the class with name "John" and age 36
+# Call the greet method on p1
+
+# Assignment3
+# Create a class called car
+#  Add an __init__ method that takes brand parameter and store it as a property
+# Add a method called show that prints brand name
+# Create an object c1 of the class with brand name "Ford" 
+# Call the show method on c1
+
+
+# Class properties
+
+# class Person:
+#     def __init__(self,name,age=24):
+#         self.name=name
+#         self.age=age
+#     def printname(self):
+#         print(self.name)
+#     def printage(self):
+#         print(self.age)
+#     def greet(self):
+#         return f"Hii {self.name}"
+    
+# p1=Person("Ram",24)
+# p1.name="Krishna"
+# print(p1.greet())
+# print(p1.name)
+# print(p1.age)
+
+# Assignment 4
+# Create a class Student with an __init__ that takes name and grade, and stores them as properties
+# Create an object s1 with name "Ram" and grade "A"
+# Print the grade of s1
+# Change the grade of s1 to "B"
+# Print the updated grade
+
+
+# __str__() Method
+
+# class Person:
+#     def __init__(self,name,age=24):
+#         self.name=name
+#         self.age=age
+#     def printname(self):
+#         print(self.name)
+#     def printage(self):
+#         print(self.age)
+#     def greet(self):
+#         return f"Hii {self.name}"
+#     def __str__(self):
+#         return f"My name is {self.name} and my age is {self.age}"
+    
+# p1=Person("Ram",24)
+# print(p1)
+
+# Methods with parameter-> these accept parameter just like normal function
+
+# class Calculator:
+#     def add(self,a,b):
+#         return a+b
+#     def multiplty(self,a,b):
+#         return a*b
+
+# calc=Calculator()
+# print(calc.add(3,5))
+# print(calc.multiplty(232,5345))
+
+# Assignment5
+
+# Create a class called Rectangle
+# Add an __init__ method with width and height, and store them as properties
+# Add a method called area that returns the width multiplied by the height
+# Create an object r1 with width 5 and height 3
+# Print the area of r1
+
+# Inheritance
+
+# Parent class-base class
+# child class
+
+# class Person:
+#     def __init__(self,name,age=24):
+#         self.name=name
+#         self.age=age
+#     def printname(self):
+#         print(self.name)
+#     def printage(self):
+#

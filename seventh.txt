@@ -1,0 +1,204 @@
+Create the following DataFrame:
+
+
+# cook your dish here
+# Assignment filtering 
+# print number between 10 and 30 in and array
+# print all marks greater than 50 in an array
+# print elements in an array which are divisible by 5
+# print elements that are multiples of 2 and 3 in an array
+
+
+# indexing assignment
+# print the index of value 10 in an array
+# find the indices of all even number in an array
+
+# where
+# replace negative values with 0 in an array
+# replace even number with 0 in an array
+
+
+# Pandas
+# Pandas is a Python library used for working with data sets.
+# It has functions for analyzing, cleaning, exploring, and manipulating data.
+# pandas can clean messy data sets, and make them readable and relevant.
+
+
+# pip install pandas
+# import pandas as pd
+# mydataset = {
+#   'cars': ["BMW", "Volvo", "Ford"],
+#     'passings': [3, 7, 2]
+# }
+# myvar = pd.DataFrame(mydataset)
+# print(myvar)
+# print(pd.__version__)
+
+# series
+# clumn in a table
+# import pandas as pd
+# a = [1, 7, 2]
+# myvar = pd.Series(a)
+# # print(myvar)
+# print(myvar[0])
+
+# import pandas as pd
+# a = [1, 7, 2]
+# myvar = pd.Series(a,index=["x", "y", "z"])
+# print(myvar)
+# print(myvar["y"])
+
+# key/value objects as Series
+# import pandas as pd
+# calories = {"day1": 420, "day2": 380, "day3": 390}
+# myvar = pd.Series(calories,index=["day1", "day2"])
+# print(myvar)
+
+
+# series is like a column in a table. It is a one-dimensional array holding data of any type.
+# dataframe is the whole table ,or 2-dimensional array holding data of any type. It is the most commonly used pandas object.
+
+# import pandas as pd
+# data = {
+#     "calories": [420, 380, 390],
+#     "duration": [50, 40, 45]
+# }
+# myvar = pd.DataFrame(data)
+# print(myvar)
+
+
+# pandas use loc attribute to return one or more specified row(s) .
+
+# import pandas as pd
+# data = {
+#     "calories": [420, 380, 390],
+#     "duration": [50, 40, 45]
+# }
+# myvar = pd.DataFrame(data)
+# print(myvar)
+# print(myvar.loc[[0,1,2]])
+
+# named index ->use can name your own index, and use it to access a specified row.
+
+# import pandas as pd
+# data = {
+#     "calories": [420, 380, 390],
+#     "duration": [50, 40, 45]
+# }
+# myvar = pd.DataFrame(data,index=["day1", "day2", "day3"])
+# print(myvar)
+# print(myvar.loc[[0,1,2]])
+# print(myvar.loc[["day2","day3"]])
+
+# df.read_csv('data.csv')
+# import pandas as pd
+
+# pd.options.display.max_rows=1000-> you can change the maximum rows number with the same statement
+# df=pd.read_csv(r'C:\Users\hp\Downloads\data.csv')
+# # print(df)
+# # print(df.to_string())
+# # print(pd.options.display.max_rows)
+# print(df)
+
+
+# Reading Json file->it like a plane text but has the formate of an object
+# import pandas as pd
+# df=pd.read_json('data.json')
+# print(df.to_string())
+# print(df)
+
+
+# viewing the data 
+# import pandas as pd
+# df=pd.read_csv(r'C:\Users\hp\Downloads\data.csv')
+# print(df.head()) # it will print the first 10 rows of the data
+# print(df.tail(10)) # it will print the last 10 rows of the data
+# print(df.info()) # it will print the information about the data
+
+
+
+# Data Cleaning -> means fixing or removing incorrect, corrupted, incorrectly formatted, duplicate, or incomplete data within a dataset.
+
+# Remove Rows
+
+# import pandas as pd
+# df=pd.read_csv(r'C:\Users\hp\Downloads\data.csv')
+# new_df=df.dropna() # it will remove all the rows with null values
+# print(new_df.to_string())
+# df.dropna(inplace=True) # it will remove all the rows with null values and save the changes in the original dataframe
+# print(df.to_string())
+
+
+# Replace Empty Values
+
+# import pandas as pd
+# # df=pd.read_csv(r'C:\Users\hp\Downloads\data.csv')
+# df=pd.read_json('data.json')
+# df.fillna({"Calories":130}, inplace=True)
+# print(df.to_string())
+
+# Replacing using Mean,Median,Mode
+
+# import pandas as pd
+# df=pd.read_json('data.json')
+# x=df["Calories"].mean()
+# x=df["Calories"].median() 
+# x=df["Calories"].mode()[0]  
+# print(x)
+# df.fillna({"Calories":x}, inplace=True)
+# print(df.to_string())
+
+
+# Assignments
+# Create the following DataFrame:
+
+# Name	Age	City
+# A	21	Delhi
+# B	22	Mumbai
+# C	20	Chennai
+# D	23	Kolkata
+# Tasks
+# Display the first 2 rows.
+# Display the last 2 rows.
+# Find the shape of the DataFrame.
+# Print column names.
+# Print data types of all columns.
+# Add a new column Salary.
+# Remove the City column.
+# Rename Age to Student_Age.
+
+
+
+# Create a DataFrame:
+
+# Name	Marks	Branch
+# Ram	85	CSE
+# Shyam	75	ECE
+# Mohan	92	CSE
+# Rohan	60	ME
+# Aman	88	ECE
+# Tasks
+# Display students with marks > 80.
+# Display CSE students.
+# Display students whose marks are between 70 and 90.
+# Find the student with highest marks.
+# Find the student with lowest marks.
+# Count students branch-wise.
+
+
+# Assignment 3: Handling Missing Values
+
+# Create:
+
+# Name	Age	Salary
+# A	21	50000
+# B	NaN	60000
+# C	23	NaN
+# D	NaN	45000
+# Tasks
+# Find total missing values.
+# Find missing values column-wise.
+# Replace missing ages with average age.
+# Replace missing salary with median salary.
+# Remove rows having any missing value.
+# Remove columns having more than 50% missing values.
